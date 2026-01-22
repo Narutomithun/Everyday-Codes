@@ -3,6 +3,9 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+    background-image: url('https://hips.hearstapps.com/hmg-prod/images/paris-hotels-with-eiffel-tower-views-1-1664292745.jpg?crop=1xw:1xh;center,top&resize=980:*');
+    background-size: cover;
+    background-attachment: fixed;   
 }
 
 header {
@@ -61,4 +64,19 @@ p {
     color: #666;
     font-size: 16px;
     line-height: 1.5;
+}
+footer {
+    text-decoration-color: aqua;
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer-text {
+    color:aqua;
+    margin: 0;
+    font-size: 14px;
 }
