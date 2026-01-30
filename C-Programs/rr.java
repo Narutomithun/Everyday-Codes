@@ -11,6 +11,7 @@ public class rr{
     int rkh = sc.nextInt();
     if(rkr==0){
     System.out.println("the result will be: 1");
+    System.out.print("Heheheh git push");
     }
     else if(rkr%2==0){
         n=n*n;
