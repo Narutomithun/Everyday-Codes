@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fibonacci Sequence</title>
+    </head>
+    <body>
+        <h1>Fibonacci Sequence Generator</h1>
+        <script type="text/javascript">
+            var num = prompt("Enter the number of terms for Fibonacci series:");
+            //num = parseInt(num);
+            
+            if (num != null && num > 0) {
+                var fib1 = 0, fib2 = 1, fib = 0;
+                var result = "Fibonacci Series: ";
+                
+                if (num == 1) {
+                    result += fib1;
+                } else if (num == 2) {
+                    result += fib1 + ", " + fib2;
+                } else {
+                    result += fib1 + ", " + fib2;
+                    for (var i = 3; i <= num; i++) {
+                        fib = fib1 + fib2;
+                        result += ", " + fib;
+                        fib1 = fib2;
+                        fib2 = fib;
+                    }
+                }
+                
+                document.write("<h2>" + result + "</h2>");
+            } else {
+                document.write("<p>Please enter a valid positive number.</p>");
+            }
+        </script>
+    </body>
+</html>
