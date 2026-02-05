@@ -31,6 +31,55 @@
             } else {
                 document.write("<p>Please enter a valid positive number.</p>");
             }
+            
+            
+            
+            
+            var sqNum = prompt("Enter a number to find its square:");
+            if (sqNum != null) {
+                var square = sqNum * sqNum;
+                document.write("<h2>Square of " + sqNum + " is: " + square + "</h2>");
+            }
+            
+            
+            var isprime = function(n) {
+                if (n <= 1) return false;
+                for (var i = 2; i <= Math.sqrt(n); i++) {
+                    if (n % i === 0) return false;
+                }
+                return true;
+            };
+
+
+            var primeNum = prompt("Enter a number to check if it's prime:");
+            if (primeNum != null) {
+                if (isprime(primeNum)) {
+                    document.write("<h2>" + primeNum + " is a prime number.</h2>");
+                } else {
+                    document.write("<h2>" + primeNum + " is not a prime number.</h2>");
+                }
+            }
+
+
+            var evenoroddNum = prompt("Enter a number to check if it's even or odd:");
+            if (evenoroddNum != null) {
+                if (evenoroddNum % 2 === 0) {
+                    document.write("<h2>" + evenoroddNum + " is an even number.</h2>");
+                } else {
+                    document.write("<h2>" + evenoroddNum + " is an odd number.</h2>");
+                }
+            }
+
+            var factorialNum = prompt("Enter a number to find its factorial:");
+            if (factorialNum != null && factorialNum >= 0) {
+                var factorial = 1;
+                for (var i = 1; i <= factorialNum; i++) {
+                    factorial *= i;
+                }
+                document.write("<h2>Factorial of " + factorialNum + " is: " + factorial + "</h2>");
+            }
+
+            
         </script>
     </body>
 </html>
