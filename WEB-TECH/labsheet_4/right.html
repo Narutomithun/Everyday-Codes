@@ -23,15 +23,17 @@
 </style>
 <body>
     <center><h1>ENTER LOGIN DETAILS:</h1>
-        <label for="email">Login ID:</label><br>
-        <input type="text" id="email" name="email" required><br><br>
+        <form action="frames.html" method="get" target="right">
+            <label for="email">Login ID:</label><br>
+            <input type="text" id="email" name="email" required><br><br>
 
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
 
-        <input type="submit" value="Login">
-        <input type="reset" value="Reset"></center><br><br>
-    </form></center>
+            <input type="submit" value="Login" onclick="alert('Login Successful')">
+            <input type="reset" value="Reset">
+        </form>
+    </center><br><br>
     
 </body>
 </html>
