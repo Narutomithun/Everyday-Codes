@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: powderblue;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            background-color: rgb(108, 73, 222);
+            padding: 25px;
+            width: 360px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        input, textarea, select {
+            padding: 6px;
+            margin: 6px 0;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .inline {
+            display: flex;
+            gap: 10px;
+        }
+
+        .inline input {
+            width: 100%;
+        }
+
+        .radio-group input {
+            width: auto;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<form action="welcome.html" method="get" target ="_blank">
+    <h2>Registration Form</h2>
+
+    ROLL NO:
+    <input type="number" class="full-width" placeholder="Enter Roll No">
+
+    NAME:
+    <div class="inline">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+    </div>
+
+    DOB:
+    <input type="date" class="full-width">
+
+    PASSWORD:
+    <input type="password" class="full-width" placeholder="******">
+
+    CONFIRM PASSWORD:
+    <input type="password" class="full-width" placeholder="******">
+
+    PHONE NO:
+    <div class="inline">
+        <input type="text" value="+91" readonly>
+        <input type="text" placeholder="Enter 10-digit number">
+    </div>
+
+    DEPARTMENT:
+    <div class="radio-group">
+        <input type="radio" name="dept"> CSE
+        <input type="radio" name="dept"> ECE
+        <input type="radio" name="dept"> ISE
+    </div>
+
+    GENDER:
+    <div class="radio-group">
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Others
+    </div>
+
+    COURSE:
+    <select class="full-width">
+        <option>CSE</option>
+        <option>ISE</option>
+        <option>ECE</option>
+    </select>
+
+    STUDENT IMAGE:
+    <input type="file" class="full-width">
+
+    CITY:
+    <input type="text" class="full-width" placeholder="Enter City">
+
+    ADDRESS:
+    <textarea rows="4" class="full-width" placeholder="Write here"></textarea>
+
+    <div class="buttons">
+        <input type="submit" value="Submit" onclick="alert('Successful')">
+        <input type="reset" value="Reset">
+    </div>
+</form>
+
+</body>
+</html>
