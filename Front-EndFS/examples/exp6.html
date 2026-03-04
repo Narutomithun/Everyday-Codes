@@ -1,0 +1,28 @@
+<form>
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required>
+
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="dob" required onchange="calAge()">
+
+<div id="ctn"></div>
+
+<button type="submit">Sign Up</button>
+</form>
+
+<script>
+function calAge() {
+    var dob = document.getElementById("dob").value;
+    var birthYear = new Date(dob).getFullYear();
+    var currentYear = new Date().getFullYear();
+    var age = currentYear - birthYear;
+
+    if (age < 18) {
+        document.getElementById("ctn").innerHTML = "";
+    } else if (age >= 18 && age <= 25) {
+        document.getElementById("ctn").innerHTML = "<label>Age:</label><input type='range' min='18' max='100'><br><label>Email:</label><input type='email' required>";
+    } else {
+        document.getElementById("ctn").innerHTML = "<label>Age:</label><input type='range' min='18' max='100'><br><label>Email:</label><input type='email' required><br><label>Website:</label><input type='url'>";
+    }
+}
+</script>
