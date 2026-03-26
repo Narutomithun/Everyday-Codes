@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Online Shopping Catalogue</title>
+
+<style type="text/css">
+body{
+    font-family: Arial;
+    text-align:center;
+    background-color: rgb(255, 171, 111);
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    background-color: seashell;
+}
+
+.item{
+    border:1px solid #ccc;
+    width:200px;
+    margin:15px;
+    padding:10px;
+}
+
+img{
+    width:150px;
+    height:150px;
+}
+
+button{
+    padding:8px;
+    background-color:green;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+</style>
+
+<script type="text/javascript">
+function addToCart(){
+    window.location="order.html";
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Online Shopping Catalogue</h1>
+
+<div class="container">
+
+<div class="item">
+<h3>Headphones</h3>
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=150&h=150&fit=crop" alt="Headphones"/>
+<p>$59.99</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<div class="item">
+<h3>Smart Watch</h3>
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=150&h=150&fit=crop" alt="Watch"/>
+<p>$199.99</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<div class="item">
+<h3>Mobile Phone</h3>
+<img src="https://c.pxhere.com/photos/21/73/iphone_smartphone_phone_mobile_phone_technology_touch_screen_mobile-1091005.jpg!d" alt="Phone"/>
+<p>$299.99</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<div class="item">
+<h3>Bluetooth Speaker</h3>
+<img src="https://m.media-amazon.com/images/I/71R6fEX2LFL.jpg" alt="Speaker"/>
+<p>$79.99</p>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+</div>
+<hr />
+<p>&copy; 2024 Online Shopping</p>
+
+</body>
+</html>

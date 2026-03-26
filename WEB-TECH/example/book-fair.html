@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Fair</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf6e3;
+            color: #333;
+        }
+
+        header {
+            background-color: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #a0522d;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Pseudo-class selector: link states */
+        nav a:link {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:visited {
+            color: #f0e68c;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+        nav a:active {
+            color: #ff4500;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* ---- Contextual Selector ---- */
+        /* Only <p> inside .featured-books gets this style */
+        .featured-books p { 
+            font-size: 18px;
+            color: #8b0000;
+            font-style: italic;
+            border-left: 4px solid #8b4513;
+            padding-left: 10px;
+        }
+
+        /* Only <h3> inside .featured-books */
+        .featured-books h3 {
+            color: #8b4513;
+            font-size: 22px;
+        }
+
+        .featured-books {
+            background-color: #fff8dc;
+            padding: 20px;
+            border: 2px solid #deb887;
+            margin-bottom: 20px;
+        }
+
+        .all-books {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .all-books p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        h2 {
+            text-align: center;
+            color: #8b4513;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+
+        /* Pseudo-class selector: first-child & last-child */
+        li:first-child {
+            background-color: #ffd700;
+            font-weight: bold;
+            border-left: 5px solid #8b4513;
+        }
+
+        li:last-child {
+            background-color: #ffe4b5;
+            border-left: 5px solid #a0522d;
+        }
+
+        /* Pseudo-class selector: nth-child */
+        li:nth-child(even) {
+            background-color: #faf0e6;
+        }
+
+        /* Pseudo-class selector: hover on list items */
+        li:hover {
+            background-color: #f5deb3;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Online Book Fair 2026</h1>
+        <p>Discover, Explore, Read!</p>
+    </header>
+
+    <!-- Pseudo-class selectors: a:link, a:visited, a:hover, a:active -->
+    <nav>
+        <a href="#featured">Featured</a>
+        <a href="#all-books">All Books</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Contextual Selector: .featured-books p and .featured-books h3 -->
+        <section id="featured" class="featured-books">
+            <h2>Featured Books</h2>
+            <h3>The Great Gatsby - F. Scott Fitzgerald</h3>
+            <p>A masterpiece of American fiction set in the Jazz Age.</p>
+
+            <h3>To Kill a Mockingbird - Harper Lee</h3>
+            <p>A timeless story of justice and racial inequality.</p>
+
+            <h3>1984 - George Orwell</h3>
+            <p>A chilling vision of a dystopian future under total surveillance.</p>
+        </section>
+
+        <!-- Same tags (p, h3) outside .featured-books won't get contextual styles -->
+        <section id="all-books" class="all-books">
+            <h2>All Books Available</h2>
+            <p>Browse our full collection below:</p>
+
+            <!-- Pseudo-class selectors: first-child, last-child, nth-child, hover -->
+            <ul>
+                <li>The Great Gatsby - Rs. 350</li>
+                <li>To Kill a Mockingbird - Rs. 400</li>
+                <li>1984 - Rs. 300</li>
+                <li>Pride and Prejudice - Rs. 280</li>
+                <li>The Catcher in the Rye - Rs. 320</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <p>Contact us: bookfair@example.com | &copy; 2026 Online Book Fair</p>
+    </footer>
+
+</body>
+</html>

@@ -1,3 +1,4 @@
+package labsheets;
 import java.util.Scanner;
 public class LABSHEET3 {
     public static void main(String[] args) {
