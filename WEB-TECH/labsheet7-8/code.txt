@@ -1,0 +1,309 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Instructions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Web Technologies Quiz!</h1>
+        <div class="instructions-box">
+            <h2>Instructions:</h2>
+            <ul>
+                <li>This quiz consists of 5 multiple-choice questions.</li>
+                <li>Each question has 4 options; select only one.</li>
+                <li>There is no time limit for the quiz.</li>
+                <li>Click "Submit Quiz" on the last page to see your results (feature to be added later or implied).</li>
+                <li>Please fill in your details accurately on the next page.</li>
+            </ul>
+            <p>Good luck!</p>
+        </div>
+        <a href="registration.html" class="button">Next</a>
+    </div>
+</body>
+</html>
+
+
+quiz.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Web Technologies Quiz</h1>
+        <form id="quizForm">
+            <div class="question-block">
+                <p><strong>1. What does HTML stand for?</strong></p>
+                <label><input type="radio" name="q1" value="a" required> Hyper Text Markup Language</label><br>
+                <label><input type="radio" name="q1" value="b"> High Tech Multi Language</label><br>
+                <label><input type="radio" name="q1" value="c"> Hyperlink and Text Markup Language</label><br>
+                <label><input type="radio" name="q1" value="d"> Home Tool Markup Language</label><br>
+            </div>
+
+            <div class="question-block">
+                <p><strong>2. Which CSS property is used to change the text color of an element?</strong></p>
+                <label><input type="radio" name="q2" value="a" required> background-color</label><br>
+                <label><input type="radio" name="q2" value="b"> text-color</label><br>
+                <label><input type="radio" name="q2" value="c"> color</label><br>
+                <label><input type="radio" name="q2" value="d"> font-color</label><br>
+            </div>
+
+            <div class="question-block">
+                <p><strong>3. What is the correct JavaScript syntax to change the content of the HTML element below? `<p id="demo">This is a demonstration.</p>`</strong></p>
+                <label><input type="radio" name="q3" value="a" required> document.getElementById("demo").innerHTML = "Hello World!";</label><br>
+                <label><input type="radio" name="q3" value="b"> document.getElementByName("demo").innerHTML = "Hello World!";</label><br>
+                <label><input type="radio" name="q3" value="c"> #demo.innerHTML = "Hello World!";</label><br>
+                <label><input type="radio" name="q3" value="d"> document.html("demo").innerHTML = "Hello World!";</label><br>
+            </div>
+
+            <div class="question-block">
+                <p><strong>4. Which tag is used to define an unordered list in HTML?</strong></p>
+                <label><input type="radio" name="q4" value="a" required> `<ul>`</label><br>
+                <label><input type="radio" name="q4" value="b"> `<ol>`</label><br>
+                <label><input type="radio" name="q4" value="c"> `<li>`</label><br>
+                <label><input type="radio" name="q4" value="d"> `<dl>`</label><br>
+            </div>
+
+            <div class="question-block">
+                <p><strong>5. What does the acronym "API" stand for in web development?</strong></p>
+                <label><input type="radio" name="q5" value="a" required> Advanced Programming Interface</label><br>
+                <label><input type="radio" name="q5" value="b"> Application Protocol Interface</label><br>
+                <label><input type="radio" name="q5" value="c"> Application Programming Interface</label><br>
+                <label><input type="radio" name="q5" value="d"> Automated Program Interaction</label><br>
+            </div>
+
+            <button type="submit" class="button">Submit Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // In a real quiz, you would calculate the score here.
+            // For this problem, we are just moving to the thank you page.
+
+            // Redirect to the thank you page
+            window.location.href = 'thankyou.html';
+        });
+    </script>
+</body>
+</html>
+
+registration.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="rollNo">Roll Number/ID:</label>
+                <input type="text" id="rollNo" name="rollNo" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department/Class:</label>
+                <input type="text" id="department" name="department" required>
+            </div>
+            <button type="submit" class="button">Start Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            // Store user details in localStorage or sessionStorage
+            // This allows us to access them on later pages (like the Thank You page)
+            localStorage.setItem('userName', document.getElementById('name').value);
+            // You can store other details if needed
+
+            // Redirect to the quiz page
+            window.location.href = 'quiz.html';
+            event.preventDefault(); // Prevent default form submission
+        });
+    </script>
+</body>
+</html>
+
+
+style.css
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #0056b3;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+}
+
+h2 {
+    color: #007bff;
+    margin-top: 20px;
+    font-size: 1.6em;
+}
+
+.instructions-box {
+    background-color: #e9f7ff;
+    border: 1px solid #cceeff;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.instructions-box ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.instructions-box li {
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Quiz Page Styles */
+.question-block {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.question-block p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.question-block label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.question-block input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Thank You Page */
+.small-text {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 25px;
+}
+
+
+thankyou.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thank You for Participating!</h1>
+        <p id="thankYouMessage">We appreciate your time.</p>
+        <p class="small-text">You can close this window now.</p>
+    </div>
+
+    <script>
+        // Retrieve the user's name from localStorage
+        const userName = localStorage.getItem('userName');
+        if (userName) {
+            document.getElementById('thankYouMessage').textContent = `Thank you, ${userName}, for participating in the quiz! We appreciate your time.`;
+        }
+    </script>
+</body>
+</html>
+

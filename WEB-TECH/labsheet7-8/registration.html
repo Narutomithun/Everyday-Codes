@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="rollNo">Roll Number/ID:</label>
+                <input type="text" id="rollNo" name="rollNo" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department/Class:</label>
+                <input type="text" id="department" name="department" required>
+            </div>
+            <button type="submit" class="button">Start Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            // Store user details in localStorage or sessionStorage
+            // This allows us to access them on later pages (like the Thank You page)
+            localStorage.setItem('userName', document.getElementById('name').value);
+            // You can store other details if needed
+
+            // Redirect to the quiz page
+            window.location.href = 'quiz.html';
+            event.preventDefault(); // Prevent default form submission
+        });
+    </script>
+</body>
+</html>

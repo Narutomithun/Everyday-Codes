@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Web Technologies Quiz</h1>
+        <form id="quizForm">
+            <div class="question-block">
+                <p><strong>1. What does HTML stand for?</strong></p>
+                <label><input type="radio" name="q1" value="a" required> Hyper Text Markup Language</label><br>
+                <label><input type="radio" name="q1" value="b"> High Tech Multi Language</label><br>
+                <label><input type="radio" name="q1" value="c"> Hyperlink and Text Markup Language</label><br>
+                <label><input type="radio" name="q1" value="d"> Home Tool Markup Language</label><br>
+            </div>
+
+            <div class="question-block">
+                <p><strong>2. Which CSS property is used to change the text color of an element?</strong></p>
+                <label><input type="radio" name="q2" value="a" required> background-color</label><br>
+                <label><input type="radio" name="q2" value="b"> text-color</label><br>
+                <label><input type="radio" name="q2" value="c"> color</label><br>
+                <label><input type="radio" name="q2" value="d"> font-color</label><br>
+            </div>
+
+            <div class="question-block">
+                <p><strong>3. What is the correct JavaScript syntax to change the content of the HTML element below? `<p id="demo">This is a demonstration.</p>`</strong></p>
+                <label><input type="radio" name="q3" value="a" required> document.getElementById("demo").innerHTML = "Hello World!";</label><br>
+                <label><input type="radio" name="q3" value="b"> document.getElementByName("demo").innerHTML = "Hello World!";</label><br>
+                <label><input type="radio" name="q3" value="c"> #demo.innerHTML = "Hello World!";</label><br>
+                <label><input type="radio" name="q3" value="d"> document.html("demo").innerHTML = "Hello World!";</label><br>
+            </div>
+
+            <div class="question-block">
+                <p><strong>4. Which tag is used to define an unordered list in HTML?</strong></p>
+                <label><input type="radio" name="q4" value="a" required> <code>&lt;ul&gt;</code></label><br>
+                <label><input type="radio" name="q4" value="b"> <code>&lt;ol&gt;</code></label><br>
+                <label><input type="radio" name="q4" value="c"> <code>&lt;li&gt;</code></label><br>
+                <label><input type="radio" name="q4" value="d"> <code>&lt;dl&gt;</code></label><br>
+            </div>
+
+            <div class="question-block">
+                <p><strong>5. What does the acronym "API" stand for in web development?</strong></p>
+                <label><input type="radio" name="q5" value="a" required> Advanced Programming Interface</label><br>
+                <label><input type="radio" name="q5" value="b"> Application Protocol Interface</label><br>
+                <label><input type="radio" name="q5" value="c"> Application Programming Interface</label><br>
+                <label><input type="radio" name="q5" value="d"> Automated Program Interaction</label><br>
+            </div>
+
+            <button type="submit" class="button">Submit Quiz</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // In a real quiz, you would calculate the score here.
+            // For this problem, we are just moving to the thank you page.
+
+            // Redirect to the thank you page
+            window.location.href = 'thankyou.html';
+        });
+    </script>
+</body>
+</html>
